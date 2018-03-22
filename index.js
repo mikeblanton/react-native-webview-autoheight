@@ -21,7 +21,7 @@ import {
 const injectedScript = function() {
   function waitForBridge() {
     if (window.postMessage.length !== 1){
-      setTimeout(waitForBridge, 500);
+      setTimeout(waitForBridge, 1000);
     }
     else {
       let height = 0;
