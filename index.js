@@ -25,13 +25,13 @@ const injectedScript = function() {
     }
     else {
       let height = 0;
-      if(document.documentElement.clientHeight>document.body.clientHeight)
+      if(document.documentElement.clientHeight>document.body.innerHeight)
       {
         height = document.documentElement.clientHeight
       }
       else
       {
-        height = document.body.clientHeight
+        height = document.body.innerHeight
       }
       postMessage(height)
     }
