@@ -21,7 +21,7 @@ import {
 const injectedScript = function() {
   function waitForBridge() {
     if (window.postMessage.length !== 1){
-      setTimeout(waitForBridge, 1000);
+      setTimeout(waitForBridge, 200);
     }
     else {
       let height = 0;
@@ -36,7 +36,7 @@ const injectedScript = function() {
       postMessage(height)
     }
   }
-  waitForBridge();
+  setTimeout(waitForBridge, 1000);
 };
 
 export default class MyWebView extends Component {
